@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Ecdysiz - Insta Hashtag Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Instagram Hashtag Generator by <span class="highlight">Ecdysiz</span></h1>
+            <p>Generate optimized hashtags for superior Instagram engagement</p>
+        </div>
+      
+        <div class="tool-container">
+            <form id="hashtagForm">
+                <div class="form-group">
+                    <label for="mainTopic">Main Topic</label>
+                    <input type="text" id="mainTopic" placeholder="Enter your main topic (e.g. fitness, travel, food)" required>
+                </div>
+      
+                <div class="form-group">
+                    <label for="specificTags">Specific Keywords (comma separated)</label>
+                    <input type="text" id="specificTags" placeholder="e.g. workout, gym, muscles">
+                </div>
+      
+                <div class="form-group">
+                    <label for="audienceSize">Target Audience Size</label>
+                    <select id="audienceSize">
+                        <option value="small">Small (under 10k followers)</option>
+                        <option value="medium" selected>Medium (10k-100k followers)</option>
+                        <option value="large">Large (over 100k followers)</option>
+                    </select>
+                </div>
+      
+                <div class="form-group">
+                    <label for="contentDescription">Content Description</label>
+                    <textarea id="contentDescription" placeholder="Describe your content briefly" required></textarea>
+                </div>
+      
+                <div class="btn-container">
+                    <button type="button" class="btn" id="generateBtn">GENERATE HASHTAGS</button>
+                </div>
+            </form>
+      
+            <div class="loading" id="loading" style="display: none;"></div>
+      
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <h3>Generated Instagram Hashtags</h3>
+                <p>Select and copy these optimized hashtags for your post:</p>
+                <div id="hashtagsList"></div>
+                
+                <div class="csv-actions" id="csvActions">
+                    <button class="csv-btn" id="csvBtn">Convert to CSV File</button>
+                    <a href="#" class="download-btn" id="downloadBtn" style="display: none;">Download CSV</a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <script src="index.js"></script>
+</body>
+</html>
